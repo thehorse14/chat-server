@@ -1,0 +1,11 @@
+<Tiathan> Hi, I'm Tiathan.
+<Brian> Hi, nice to meet you. 
+I'm Brian.
+<Tiathan> More chat from me!
+<Jess> New message 1.
+<Jess> New message 2.
+<Jess> New message 3.
+<Brian> The sky is blue.
+This line is still attributed.
+<Tiathan> More chat.
+This line is still attributed.

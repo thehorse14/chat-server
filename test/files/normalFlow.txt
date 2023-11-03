@@ -1,0 +1,12 @@
+<user1> this is some chat words
+<user2> the sky is blue
+This line is still attributed
+This line is still attributed!
+<user1> more chat from me!
+<user3> this is some chat words 1
+<user3> this is some chat words 2
+<user3> this is some chat words 3
+<user2> the sky is blue
+This line is still attributed
+<user1> more chat from me!
+More words
