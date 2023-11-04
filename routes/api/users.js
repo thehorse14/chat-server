@@ -37,7 +37,7 @@ router.post('/upload', upload.any(), (req, res) => {
         const topUsers = processChatLog(chatLogText, k);
       
         return { fileName: originalname, topUsers };
-      });    
+      });
       res.json({ results });
     } catch (error) {
       console.log(error)
@@ -68,8 +68,7 @@ const processChatLog = (chatLogText, k) => {
     const sortedUsers = [...users].sort((a, b) => b[1] - a[1]);
 
     const topK = sortedUsers.filter((user, index) => index < k || user[1] === sortedUsers[k - 1][1]);
-
-    return topK;
+    return topK.map(([userName, count]) => ({ userName, count }));
   } catch (error) {
     console.error(error);
     throw error;
