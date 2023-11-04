@@ -48,9 +48,18 @@ describe('Chat Log Analyzer API', () => {
         const topUsers = result.topUsers;
         expect(topUsers).to.have.lengthOf(3);
         expect(topUsers).to.deep.equal([
-          ['user2', 23],
-          ['user3', 18],
-          ['user1', 15]
+          {
+            "userName": "user2",
+            "count": 23
+          },
+          {
+            "userName": "user3",
+            "count": 18
+          },
+          {
+            "userName": "user1",
+            "count": 15
+          },
         ]);
 
         done();
@@ -74,9 +83,18 @@ describe('Chat Log Analyzer API', () => {
         const topUsers = result.topUsers;
         expect(topUsers).to.have.lengthOf(3);
         expect(topUsers).to.deep.equal([
-          ['user2', 23],
-          ['user1', 18],
-          ['user3', 18]
+          {
+            "userName": "user2",
+            "count": 23
+          },
+          {
+            "userName": "user1",
+            "count": 18
+          },
+          {
+            "userName": "user3",
+            "count": 18
+          },
         ]);
 
         done();
@@ -100,11 +118,26 @@ describe('Chat Log Analyzer API', () => {
         const topUsers1 = result1.topUsers;
         expect(topUsers1).to.have.lengthOf(5);
         expect(topUsers1).to.deep.equal([
-          ['Brian', 19],
-          ['Tiathan', 16],
-          ['Jess', 9],
-          ['Daniel', 8],
-          ['Andy', 2]
+          {
+            "userName": "Brian",
+            "count": 19
+          },
+          {
+            "userName": "Tiathan",
+            "count": 16
+          },
+          {
+            "userName": "Jess",
+            "count": 9
+          },
+          {
+            "userName": "Daniel",
+            "count": 8
+          },
+          {
+            "userName": "Andy",
+            "count": 2
+          }
         ]);
         const result2 = res.body.results[1];
         expect(result2).to.have.property('fileName').equal('multipleFile2.txt');
@@ -113,9 +146,18 @@ describe('Chat Log Analyzer API', () => {
         const topUsers2 = result2.topUsers;
         expect(topUsers2).to.have.lengthOf(3);
         expect(topUsers2).to.deep.equal([
-          ['Brian', 16],
-          ['Tiathan', 14],
-          ['Jess', 9]
+          {
+            "userName": "Brian",
+            "count": 16
+          },
+          {
+            "userName": "Tiathan",
+            "count": 14
+          },
+          {
+            "userName": "Jess",
+            "count": 9
+          }
         ]);
 
         done();
@@ -140,9 +182,18 @@ describe('Chat Log Analyzer API', () => {
         const topUsers = result.topUsers;
         expect(topUsers).to.have.lengthOf(3);
         expect(topUsers).to.deep.equal([
-          ['Brian', 19],
-          ['Tiathan', 16],
-          ['Jess', 9]
+          {
+            "userName": "Brian",
+            "count": 19
+          },
+          {
+            "userName": "Tiathan",
+            "count": 16
+          },
+          {
+            "userName": "Jess",
+            "count": 9
+          }
         ]);
         done();
       });
